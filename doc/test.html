@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Yasmine HADDAG, Melissa AKLI, Kenza CHAHNAZ, Daniel BADOYAN, Hélios LOTT" />
+  <title>SmartCourses</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">SmartCourses</h1>
+<p class="subtitle">Dossier de lancement — M1 MIAGE Apprentissage —
+v0.1.0-SNAPSHOT</p>
+<p class="author">Yasmine HADDAG, Melissa AKLI, Kenza CHAHNAZ, Daniel
+BADOYAN, Hélios LOTT</p>
+<p class="date">20 octobre 2026</p>
+</header>
+<!--
+  Dossier de projet : 4 pages pour le dossier de lancement (R1), puis il s'enrichit à chaque livraison.
+  Compilation : make -C doc   (pandoc + WeasyPrint ; mise en page dans style.css)
+  Les commentaires HTML comme celui-ci n'apparaissent pas dans le PDF.
+-->
+<h1 id="équipe-comptes-développeurs-et-dépôt">Équipe, comptes
+développeurs et dépôt</h1>
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 30%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr>
+<th>Membre</th>
+<th>Compte GitHub</th>
+<th>Email des commits (<code>git config user.email</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yasmine HADDAG</td>
+<td><a
+href="https://github.com/yasminehdg"><code>@yasminehdg</code></a></td>
+<td><code>email</code>(haddagyasmine9@gmail.com)</td>
+</tr>
+<tr>
+<td>Melissa AKLI</td>
+<td><a
+href="https://github.com/Melissa-akli25"><code>@Melissa-akli25</code></a></td>
+<td><code>email</code>(melissa.akli2025@gmail.com)</td>
+</tr>
+<tr>
+<td>Kenza CHAHNAZ</td>
+<td><a href="https://github.com/0Kenza0"><code>@0Kenza0</code></a></td>
+<td><code>email</code>(kenzachahnaz@outlook.fr)</td>
+</tr>
+<tr>
+<td>Daniel BADOYAN</td>
+<td><a
+href="https://github.com/DanielBadoyan"><code>@DanielBadoyan</code></a></td>
+<td><code>email</code>(43003965@parisnanterre.fr)</td>
+</tr>
+<tr>
+<td>Hélios LOTT</td>
+<td><a
+href="https://github.com/helioslt"><code>@helioslt</code></a></td>
+<td><code>email</code>(helioslott@gmail.com)</td>
+</tr>
+</tbody>
+</table>
+<p>Chaque membre a vérifié que son email Git est associé à son compte
+GitHub, pour que ses commits lui soient bien attribués.
+<strong>Dépôt</strong> : <a
+href="https://github.com/Melissa-akli25/Projet-PRJ"
+class="uri">https://github.com/Melissa-akli25/Projet-PRJ</a> ·
+<strong>page de projet</strong> : à compléter.</p>
+<h1 id="projet-et-caractère-innovant">Projet et caractère innovant</h1>
+<h3 id="le-problème">Le problème</h3>
+<p>Faire ses courses en respectant son budget n’est pas toujours facile.
+Les prix varient d’un magasin à l’autre et il est parfois difficile de
+savoir où acheter ses produits au meilleur prix. De plus, choisir le
+magasin le moins cher n’est pas forcément la meilleure solution si
+celui-ci est trop éloigné et que le déplacement coûte plus cher que les
+économies réalisées.</p>
+<p><em>SmartCourses</em> a pour objectif d’aider les utilisateurs à
+mieux organiser leurs courses et à réduire leurs dépenses. L’application
+permet de créer une liste de courses, de rechercher des produits, de
+comparer les prix entre différents magasins et de constituer un panier
+adapté à son budget. Elle peut également proposer des produits
+alternatifs moins chers et prendre en compte la distance entre les
+magasins pour aider l’utilisateur à faire le meilleur choix.</p>
+<h3 id="ce-qui-est-innovant">Ce qui est innovant</h3>
+<ul>
+<li><p><strong>L’optimisation plutôt que la simple comparaison.</strong>
+SmartCourses ne se contente pas d’afficher les prix des produits.
+L’application cherche à proposer les solutions les plus avantageuses en
+tenant compte du budget de l’utilisateur et de ses besoins.</p></li>
+<li><p><strong>La prise en compte du coût du déplacement.</strong> Le
+magasin qui propose les prix les plus bas n’est pas toujours le plus
+intéressant. SmartCourses compare les économies possibles avec la
+distance à parcourir afin d’aider l’utilisateur à déterminer si le
+déplacement vaut réellement le coup.</p></li>
+<li><p><strong>Des alternatives adaptées au budget.</strong> Lorsqu’un
+produit est trop cher ou indisponible, l’application peut proposer des
+produits similaires moins chers. L’utilisateur peut ainsi réduire ses
+dépenses sans devoir renoncer systématiquement aux produits qu’il
+souhaite acheter.</p></li>
+</ul>
+<h3 id="ce-qui-différencie-smartcourses">Ce qui différencie
+SmartCourses</h3>
+<p>Les applications de courses peuvent permettre de rechercher des
+produits, de préparer des listes ou de consulter des prix. SmartCourses
+souhaite aller plus loin en combinant plusieurs critères pour aider
+l’utilisateur à prendre ses décisions.</p>
+<p>L’objectif n’est donc pas seulement de trouver le produit le moins
+cher, mais de <em>déterminer la solution la plus avantageuse pour
+l’ensemble des courses, en tenant compte du budget, des prix et des
+déplacements</em>.</p>
+<h1 id="scénarios-dusage">Scénarios d’usage</h1>
+<h3 id="scénario-1-création-du-profil-utilisateur">Scénario 1 : Création
+du profil utilisateur</h3>
+<p><em>En tant qu’utilisateur, je renseigne mon profil (foyer, budget,
+régime, placards, équipement), afin que le moteur d’optimisation génère
+un panier adapté à ma situation.</em></p>
+<p><strong>Préconditions</strong></p>
+<ul>
+<li>L’utilisateur a téléchargé l’application et a créé un compte.</li>
+<li>L’utilisateur est connecté à son compte.</li>
+</ul>
+<p><strong>Postconditions</strong></p>
+<ul>
+<li>Les paramètres de l’utilisateur sont sauvegardés dans la base de
+données.</li>
+<li>Le profil est prêt à être utilisé par le moteur d’optimisation pour
+générer un panier.</li>
+</ul>
+<p><strong>Scénario nominal</strong></p>
+<ol type="1">
+<li>L’utilisateur accède à la page de configuration de son profil.</li>
+<li>L’utilisateur saisit la composition de son foyer (nombre de
+personnes, adultes, enfants).</li>
+<li>L’utilisateur configure son budget alimentaire de référence et son
+seuil de flexibilité.</li>
+<li>L’utilisateur renseigne ses régimes alimentaires spécifiques et ses
+allergies.</li>
+<li>L’utilisateur déclare les produits déjà présents dans ses placards
+et ceux proches de la péremption.</li>
+<li>L’utilisateur indique son équipement de cuisine et le temps maximum
+souhaité pour la préparation des repas.</li>
+<li>L’utilisateur valide le formulaire pour enregistrer son profil.</li>
+<li>Le système enregistre les données et affiche un message de
+confirmation de création du profil.</li>
+</ol>
+<p><strong>Scénario alternatif</strong></p>
+<ul>
+<li><strong>8.a</strong> Le système détecte que des informations
+obligatoires sont manquantes ou incorrectes (ex. : budget négatif).
+<ul>
+<li>8.a.1 Le système affiche un message d’erreur à côté des champs
+posant problème.</li>
+<li>8.a.2 Retour à l’étape 7 : l’utilisateur corrige sa saisie et
+revalide.</li>
+</ul></li>
+</ul>
+<h3 id="scénario-2-optimisation-du-panier-selon-le-budget">Scénario 2 :
+Optimisation du panier selon le budget</h3>
+<p><em>En tant qu’utilisateur, je donne ma liste de courses et mon
+budget maximum, afin d’obtenir un panier qui respecte ce budget grâce à
+des alternatives moins chères.</em></p>
+<p><strong>Préconditions</strong></p>
+<ul>
+<li>L’utilisateur possède un compte SmartCourses et est connecté.</li>
+<li>Les produits et leurs prix sont disponibles dans l’application.</li>
+<li>L’utilisateur a défini un budget pour ses courses.</li>
+</ul>
+<p><strong>Scénario nominal</strong></p>
+<ol type="1">
+<li>L’utilisateur crée une liste de courses et ajoute les produits qu’il
+souhaite acheter.</li>
+<li>L’utilisateur indique le budget maximum qu’il souhaite
+respecter.</li>
+<li>SmartCourses calcule le montant total estimé de la liste.</li>
+<li>Si le montant dépasse le budget, l’application identifie les
+produits qui peuvent être remplacés par des alternatives moins
+chères.</li>
+<li>SmartCourses propose plusieurs alternatives à l’utilisateur, en
+indiquant les économies possibles.</li>
+<li>L’utilisateur consulte les propositions et choisit celles qui lui
+conviennent.</li>
+<li>L’application met à jour le panier et affiche le nouveau montant
+estimé.</li>
+</ol>
+<p><strong>Scénario alternatif</strong></p>
+<ul>
+<li><strong>4.a</strong> Aucune alternative intéressante n’est
+disponible pour certains produits.
+<ul>
+<li>4.a.1 SmartCourses indique les produits pour lesquels aucune
+alternative moins chère n’a été trouvée.</li>
+<li>4.a.2 L’utilisateur peut conserver ces produits ou modifier sa liste
+manuellement. # Plan des features</li>
+</ul></li>
+</ul>
+<p>Une feature a un effet sur <strong>la BD, le back, l’API REST et le
+front</strong>. Chaque feature est portée par <strong>une seule
+personne</strong> et repose sur <strong>un algorithme</strong>
+identifié.</p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr>
+<th>Version</th>
+<th>Yasmine</th>
+<th>Melissa</th>
+<th>Kenza</th>
+<th>Daniel</th>
+<th>Hélios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>v0.1.0</strong> 24/11</td>
+<td>À définir</td>
+<td>À définir</td>
+<td>À définir</td>
+<td>À définir</td>
+<td>À définir</td>
+</tr>
+<tr>
+<td><strong>v0.2.0</strong> 08/12</td>
+<td>À définir</td>
+<td>À définir</td>
+<td>À définir</td>
+<td>À définir</td>
+<td>À définir</td>
+</tr>
+<tr>
+<td><strong>v1.0.0</strong> 19/01</td>
+<td>À définir</td>
+<td>À définir</td>
+<td>À définir</td>
+<td>À définir</td>
+<td>À définir</td>
+</tr>
+</tbody>
+</table>
+<h1 id="architecture">Architecture</h1>
+<pre><code>  Front  --HTTP/JSON--&gt;  API REST  --&gt;  Back (cas d&#39;utilisation)  --JPA--&gt;  BD
+ (React)              (Spring Web)       (Java, Spring Boot)             (MySQL)</code></pre>
+<p>Le front transmet les demandes à l’API REST. Le back exécute les
+règles métier et les algorithmes (optimisation du panier, équilibrage
+nutritionnel, substitution de produits), accède à la base de données,
+puis renvoie les résultats au front au format JSON. L’API REST est
+intégrée à l’application Spring Boot.</p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 41%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr>
+<th>Couche</th>
+<th>Choix</th>
+<th>Remarques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Front</td>
+<td>React, JavaScript, HTML/CSS</td>
+<td>saisie du budget et des préférences alimentaires, consultation des
+paniers proposés ; client de l’API REST uniquement ; dossier
+<code>front/</code></td>
+</tr>
+<tr>
+<td>API REST</td>
+<td>Spring Web (Spring Boot), OpenAPI / Swagger UI</td>
+<td>échanges HTTP et JSON ; versionnée sous <code>/api/v1</code></td>
+</tr>
+<tr>
+<td>Back</td>
+<td>Java, Spring Boot, Spring Data JPA, Hibernate, Bean Validation</td>
+<td>règles métier et algorithmes ; <strong>algorithmes en Java pur,
+indépendants de Spring</strong></td>
+</tr>
+<tr>
+<td>BD</td>
+<td>MySQL (H2 pour les tests)</td>
+<td>produits, informations nutritionnelles, prix par magasin, paniers ;
+schéma versionné par <strong>Flyway</strong></td>
+</tr>
+<tr>
+<td>Qualité</td>
+<td>JUnit 5, JaCoCo, SonarCloud</td>
+<td>intégration continue GitHub Actions</td>
+</tr>
+<tr>
+<td>Conteneurs</td>
+<td>Docker Compose</td>
+<td>BD dès v0.1.0, application en v0.2.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Qualité du code.</strong> Au-delà de l’architecture :</p>
+<ul>
+<li><strong>Clean Code</strong> : noms métier explicites, fonctions
+courtes, pas de duplication, commentaires qui expliquent le
+<em>pourquoi</em> ;</li>
+<li><strong>SOLID</strong>, objets valeur immuables et invariants
+vérifiés à la construction ;</li>
+<li><strong>design patterns</strong> quand ils servent, nommés dans les
+fiches de features ;</li>
+<li>conventions <strong>REST</strong> et règles de sécurité
+<strong>OWASP</strong> ;</li>
+<li><em>quality gate</em> SonarCloud au vert.</li>
+</ul>
+<h1 id="démarche-pour-chaque-feature">Démarche pour chaque feature</h1>
+<p>Les étapes s’enchaînent <strong>dans cet ordre, sans en
+sauter</strong> : on ne commence une étape que lorsque la précédente est
+terminée.</p>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 53%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Étape</th>
+<th>Ce qu’on fait</th>
+<th>Terminé quand</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Idéation</td>
+<td>Besoin et scénario ; <strong>algorithme retenu</strong>, complexité,
+alternatives ; impact sur le schéma et l’API ; critères d’acceptation.
+Issue + fiche <code>doc/features/</code>.</td>
+<td>La fiche est validée par un autre membre.</td>
+</tr>
+<tr>
+<td>2. Back</td>
+<td>Migration Flyway ; <strong>domaine</strong> en Java pur (modèle,
+règles, algorithme) ; <strong>application</strong> (ports, service) ;
+adaptateur de persistance.</td>
+<td>Le code compile et ArchUnit passe.</td>
+</tr>
+<tr>
+<td>3. Tests</td>
+<td>Unitaires de l’algorithme (cas limites, invariants, propriétés) ;
+services avec faux adaptateurs ; intégration de la persistance.</td>
+<td><code>./gradlew build</code> passe ; chaque critère d’acceptation
+est couvert.</td>
+</tr>
+<tr>
+<td>4. API REST</td>
+<td>Endpoints <code>/api/v1</code>, DTO validés, erreurs
+<code>problem+json</code>, OpenAPI ; tests de l’API.</td>
+<td>Visible dans Swagger UI ; tests de l’API verts.</td>
+</tr>
+<tr>
+<td>5. Front</td>
+<td>Écrans qui consomment <strong>uniquement</strong> l’API.</td>
+<td>Scénario jouable de bout en bout ; PR relue ; fiche complétée avec
+son araignée.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="protocole-dusage-de-lia">Protocole d’usage de l’IA</h1>
+<p>Principes fondamentaux à appliquer pendant tout le long de ce projet
+:</p>
+<ul>
+<li>Vérifier au maximum les résultats qui vont nous être donnés par les
+intelligences artificielles que nous serons amenés à utiliser</li>
+<li>Chaque prompt devra être réfléchi et notre utilisation de l’IA devra
+être intelligemment pilotée afin de ne pas perdre le fil de notre
+travail et des algorithmes/codes que nous serons amenés à écrire.</li>
+<li>Interdiction d’inclure du code qu’on ne comprend pas et de confier à
+l’IA des données personnelles.</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 38%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr>
+<th>Activité</th>
+<th>Ce que fait l’IA</th>
+<th>Ce que fait l’humain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recherche du sujet et conception des objectifs du projet</td>
+<td>Aide l’humain dans son choix des fonctionnalités à inclure notamment
+par rapport à la pertinence vis-à-vis des consignes et pour éviter de
+faire un projet type « interface d’une simple base de données »</td>
+<td>Trouver le sujet du projet et réfléchir aux fonctionnalités
+techniques et algorithmiques qui pourraient inclues</td>
+</tr>
+<tr>
+<td>Algorithmes</td>
+<td>Vérifie le bon fonctionnement du code, elle peut également l’annoter
+et le rendre plus agréable à la lecture en appliquant les bonnes
+pratiques d’écriture</td>
+<td>Rassemble les attentes de rendu des algorithmes puis les conçoit et
+les écrit en prenant en compte la complexité</td>
+</tr>
+<tr>
+<td>Code technique (API, configuration, front)</td>
+<td>Peut générer certaines parties notamment les fonctions les plus
+complexes</td>
+<td>Relie chaque ligne générée et compile avant d’adapter le code en
+fonction des besoins pour répondre au sujet</td>
+</tr>
+<tr>
+<td>Tests</td>
+<td>Suggère les cas de test les plus courants pour ce type de
+projet</td>
+<td>Définit les propriétés, vérifie les tests effectués et adapte les
+propositions de de l’IA en fonction de l’avancée du projet</td>
+</tr>
+<tr>
+<td>Débogage et revue</td>
+<td>Propose des diagnostics et résout les éventuels bug persistants</td>
+<td>Analyse les erreurs et corrige en conséquence</td>
+</tr>
+</tbody>
+</table>
+<p>Afin d’assurer une traçabilité de l’usage de l’IA dans notre projet,
+les codes en èrement générés seront annotés en conséquence avec la
+précision des technologies u lisées et le niveau d’u lisa on (l’écriture
+complète étant le niveau le plus élevé et la simple demande de
+recommanda ons ou de perspec ves d’améliora on étant plus faible).</p>
+<h1 id="annexe-part-ia">Annexe : part IA / part humaine</h1>
+<p><img src="part-ia.svg" class="araignee" /></p>
+<p>Valeurs dans <code>doc/part-ia.json</code>, régénérées à chaque
+compilation.
+<!-- Commenter honnêtement les dépassements de plafond. --></p>
+</body>
+</html>
