@@ -169,7 +169,7 @@ Principes fondamentaux à appliquer pendant tout le long de ce projet :
 | Tests | Suggère les cas de test les plus courants pour ce type de projet | Définit les propriétés, vérifie les tests effectués et adapte les propositions de de l'IA en fonction de l'avancée du projet |
 | Débogage et revue | Propose des diagnostics et résout les éventuels bug persistants | Analyse les erreurs et corrige en conséquence |
 
-Afin d’assurer une traçabilité de l’usage de l’IA dans notre projet, les codes en èrement générés seront annotés en conséquence avec la précision des technologies u lisées et le niveau d’u lisa on (l’écriture complète étant le niveau le plus élevé et la simple demande de recommanda ons ou de perspec ves d’améliora on étant plus faible). 
+Afin d’assurer une traçabilité de l’usage de l’IA dans notre projet, les codes en èrement générés seront annotés en conséquence avec la précision des technologies u lisées et le niveau d’u lisa on (l’écriture complète étant le niveau le plus élevé et la simple demande de recommandations ou de perspectives d’amélioration étant plus faible). 
 
 # Annexe : part IA / part humaine {#annexe-part-ia}
 
