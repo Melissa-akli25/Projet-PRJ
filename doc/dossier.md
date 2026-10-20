@@ -155,22 +155,21 @@ Les étapes s'enchaînent **dans cet ordre, sans en sauter** : on ne commence un
 
 # Protocole d'usage de l'IA
 
-<!-- Point de départ : à discuter et adapter en équipe (voir aussi CLAUDE.md). -->
+Principes fondamentaux à appliquer pendant tout le long de ce projet :
 
-**Principe : l'IA assiste, l'humain reste l'auteur.** On ne laisse jamais l'IA tout faire sans comprendre : tout ce qui est commité a été relu et compris par son auteur, capable de l'expliquer, de le modifier et de le refaire sans aide. Les consignes des assistants de code sont versionnées dans `CLAUDE.md`.
+- Vérifier au maximum les résultats qui vont nous être donnés par les intelligences artificielles que nous serons amenés à utiliser
+- Chaque prompt devra être réfléchi et notre utilisation de l'IA devra être intelligemment pilotée afin de ne pas perdre le fil de notre travail et des algorithmes/codes que nous serons amenés à écrire.
+- Interdiction d'inclure du code qu'on ne comprend pas et de confier à l'IA des données personnelles.
 
 | Activité | Ce que fait l'IA | Ce que fait l'humain |
 |---|-----|-----|
-| Idéation et conception | Critique les idées, propose des options | Choisit, justifie, rédige la fiche |
-| Algorithme | Explique, relit, signale les cas oubliés | **Conçoit et écrit le cœur de l'algorithme** |
-| Code technique | Peut générer un premier jet | Relit chaque ligne, adapte, assume |
-| Tests | Suggère des cas | Définit cas limites et propriétés ; vérifie qu'un test échoue quand on casse le code |
-| CI/CD, conteneurisation | Peut générer workflows et Dockerfile | Comprend chaque étape, vérifie l'exécution, gère les secrets |
-| Documentation | Aide à rédiger et mettre en forme | Valide le contenu, vérifie les faits |
+| Recherche du sujet et conception des objectifs du projet | Aide l'humain dans son choix des fonctionnalités à inclure notamment par rapport à la pertinence vis-à-vis des consignes et pour éviter de faire un projet type « interface d'une simple base de données » | Trouver le sujet du projet et réfléchir aux fonctionnalités techniques et algorithmiques qui pourraient inclues |
+| Algorithmes | Vérifie le bon fonctionnement du code, elle peut également l'annoter et le rendre plus agréable à la lecture en appliquant les bonnes pratiques d'écriture | Rassemble les attentes de rendu des algorithmes puis les conçoit et les écrit en prenant en compte la complexité |
+| Code technique (API, configuration, front) | Peut générer certaines parties notamment les fonctions les plus complexes | Relie chaque ligne générée et compile avant d'adapter le code en fonction des besoins pour répondre au sujet |
+| Tests | Suggère les cas de test les plus courants pour ce type de projet | Définit les propriétés, vérifie les tests effectués et adapte les propositions de de l'IA en fonction de l'avancée du projet |
+| Débogage et revue | Propose des diagnostics et résout les éventuels bug persistants | Analyse les erreurs et corrige en conséquence |
 
-**Interdits.** Commiter du code qu'on ne comprend pas ; confier des secrets ou des données personnelles à l'IA ; commiter sous une autre identité ; présenter comme humain un travail de l'IA.
-
-**Traçabilité.** Section « Usage de l'IA » dans chaque pull request. Part de l'IA déclarée **par compétence** (haut niveau / bas niveau) dans un graphe en araignée, comparée à un plafond que l'équipe s'autorise (annexe).
+Afin d’assurer une traçabilité de l’usage de l’IA dans notre projet, les codes en èrement générés seront annotés en conséquence avec la précision des technologies u lisées et le niveau d’u lisa on (l’écriture complète étant le niveau le plus élevé et la simple demande de recommanda ons ou de perspec ves d’améliora on étant plus faible). 
 
 # Annexe : part IA / part humaine {#annexe-part-ia}
 
