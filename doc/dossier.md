@@ -47,14 +47,23 @@ L'objectif n'est donc pas seulement de faciliter l'accès aux informations, mais
 
 # Scénarios d'usage
 
-1.En tant qu'étudiant de Nanterre, je renseigne ma formation, mes matières et mes compétences. L'application me propose des étudiants d'autres universités qui suivent des matières ou des formations similaires, grâce à un matching multicritère.
-2.En tant qu'étudiant qui recherche un équivalent à une matière, je renseigne son intitulé et son contenu. L'application compare les programmes renseignés et identifie les matières similaires dans d'autres universités.
-3.En tant qu'étudiant qui ne peut pas travailler chez lui, je recherche une bibliothèque ou un espace de travail. L'application filtre les lieux selon ma localisation, les horaires et les équipements disponibles.
-4.En tant qu'étudiant qui souhaite aider les autres, je publie une fiche de révision que j'ai créée ou je référence un lien vers une ressource publique. Les autres étudiants peuvent retrouver cette ressource par matière et par catégorie.
-5.En tant qu'étudiant bloqué sur une matière, je publie une demande d'entraide. L'application permet de décrire ma difficulté et de l'associer à une matière et à des compétences recherchées.
-6.En tant qu'étudiant qui souhaite réviser avec d'autres personnes, je renseigne mon niveau, mes matières et mes objectifs. L'application peut constituer un groupe de travail selon ces critères.
-7.En tant qu'étudiant confronté à un blocage universitaire, je consulte un signalement déjà publié et je confirme que je rencontre le même problème. Le nombre de confirmations permet de mieux identifier les difficultés partagées.
-8.En tant qu'étudiant qui consulte les signalements, je souhaite retrouver les déclarations qui concernent un même problème. L'application analyse les textes et regroupe les signalements similaires.
+1. En tant qu'étudiant de Nanterre, je renseigne ma formation, mes matières et mes compétences. L'application me propose des étudiants d'autres universités qui suivent des matières ou des formations similaires, grâce à un matching multicritère.
+
+2. En tant qu'étudiant qui recherche un équivalent à une matière, je renseigne son intitulé et son contenu. L'application compare les programmes renseignés et identifie les matières similaires dans d'autres universités.
+
+3. En tant qu'étudiant qui ne peut pas travailler chez lui, je recherche une bibliothèque ou un espace de travail. L'application filtre les lieux selon ma localisation, les horaires et les équipements disponibles.
+
+4. En tant qu'étudiant qui souhaite aider les autres, je publie une fiche de révision que j'ai créée ou je référence un lien vers une ressource publique. Les autres étudiants peuvent retrouver cette ressource par matière et par catégorie.
+
+5. En tant qu'étudiant bloqué sur une matière, je publie une demande d'entraide. L'application permet de décrire ma difficulté et de l'associer à une matière et à des compétences recherchées.
+
+6. En tant qu'étudiant qui souhaite réviser avec d'autres personnes, je renseigne mon niveau, mes matières et mes objectifs. L'application peut constituer un groupe de travail selon ces critères.
+
+7. En tant qu'étudiant confronté à un blocage universitaire, je consulte un signalement déjà publié et je confirme que je rencontre le même problème. Le nombre de confirmations permet de mieux identifier les difficultés partagées.
+
+8. En tant qu'étudiant qui consulte les signalements, je souhaite retrouver les déclarations qui concernent un même problème. L'application analyse les textes et regroupe les signalements similaires.
+
+
 # Plan feature
 Une feature a un effet sur **la BD, le back, l'API REST et le front**. Chaque feature est portée par **une seule personne** et repose sur **un algorithme** identifié.
 
