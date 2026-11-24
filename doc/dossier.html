@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Yasmine HADDAG, Melissa AKLI, Kenza CHAHNAZ, Daniel BADOYAN, Hélios LOTT" />
+  <title>StudentConnect</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">StudentConnect</h1>
+<p class="subtitle">Dossier de lancement — M1 MIAGE Apprentissage —
+v0.1.0-SNAPSHOT</p>
+<p class="author">Yasmine HADDAG, Melissa AKLI, Kenza CHAHNAZ, Daniel
+BADOYAN, Hélios LOTT</p>
+<p class="date">24 novembre 2026</p>
+</header>
+<!--
+  Dossier de projet : 4 pages pour le dossier de lancement (R1), puis il s'enrichit à chaque livraison.
+  Compilation : make -C doc   (pandoc + WeasyPrint ; mise en page dans style.css)
+  Les commentaires HTML comme celui-ci n'apparaissent pas dans le PDF.
+-->
+<h1 id="équipe-comptes-développeurs-et-dépôt">Équipe, comptes
+développeurs et dépôt</h1>
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 30%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr>
+<th>Membre</th>
+<th>Compte GitHub</th>
+<th>Email des commits (<code>git config user.email</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yasmine HADDAG</td>
+<td><a
+href="https://github.com/yasminehdg"><code>@yasminehdg</code></a></td>
+<td><code>email</code>(haddagyasmine9@gmail.com)</td>
+</tr>
+<tr>
+<td>Melissa AKLI</td>
+<td><a
+href="https://github.com/Melissa-akli25"><code>@Melissa-akli25</code></a></td>
+<td><code>email</code>(melissa.akli2025@gmail.com)</td>
+</tr>
+<tr>
+<td>Kenza CHAHNAZ</td>
+<td><a href="https://github.com/0Kenza0"><code>@0Kenza0</code></a></td>
+<td><code>email</code>(kenzachahnaz@outlook.fr)</td>
+</tr>
+<tr>
+<td>Daniel BADOYAN</td>
+<td><a
+href="https://github.com/DanielBadoyan"><code>@DanielBadoyan</code></a></td>
+<td><code>email</code>(43003965@parisnanterre.fr)</td>
+</tr>
+<tr>
+<td>Hélios LOTT</td>
+<td><a
+href="https://github.com/helioslt"><code>@helioslt</code></a></td>
+<td><code>email</code>(helioslott@gmail.com)</td>
+</tr>
+</tbody>
+</table>
+<p>Chaque membre a vérifié que son email Git est associé à son compte
+GitHub, pour que ses commits lui soient bien attribués.
+<strong>Dépôt</strong> : <a
+href="https://github.com/Melissa-akli25/Projet-PRJ"
+class="uri">https://github.com/Melissa-akli25/Projet-PRJ</a> ·
+<strong>page de projet</strong> : à compléter.</p>
+<h1 id="projet-et-caractère-innovant">Projet et caractère innovant</h1>
+<h3 id="le-problème">Le problème</h3>
+<p>L’idée de <strong>StudentConnect</strong> est née de la situation
+rencontrée à l’Université Paris Nanterre, notamment des blocages et des
+perturbations qui ont pu empêcher le déroulement normal des
+enseignements et entraîner des changements d’organisation, comme le
+passage de certains cours à distance. Dans ces périodes, les étudiants
+peuvent rencontrer plusieurs difficultés : suivre les informations,
+trouver des espaces où travailler, accéder à des ressources utiles,
+continuer à réviser et travailler avec d’autres étudiants.</p>
+<p><strong>StudentConnect</strong> est une plateforme d’entraide et
+d’organisation destinée aux étudiants. Elle vise à faciliter la
+continuité du travail universitaire en regroupant plusieurs services :
+mise en relation entre étudiants de différentes universités, recherche
+de matières équivalentes, recherche d’espaces de travail, partage de
+ressources pédagogiques autorisées, demandes d’entraide et signalement
+des difficultés rencontrées à l’université.</p>
+<h3 id="ce-qui-est-innovant">Ce qui est innovant</h3>
+<p><strong>Une réponse à une situation concrète</strong> Le projet part
+des difficultés observées à Nanterre et cherche à apporter des solutions
+pratiques lorsque les cours ou l’organisation universitaire sont
+perturbés. <strong>Une ouverture interuniversitaire</strong> La mise en
+relation ne se limite pas aux étudiants d’un même établissement. Elle
+peut s’appuyer sur les formations, les matières et les compétences pour
+identifier des étudiants qui travaillent sur des contenus proches.
+<strong>Des fonctionnalités qui produisent un résultat</strong>
+L’application ne se limite pas à publier et consulter des informations :
+elle compare des matières, calcule des correspondances, regroupe des
+signalements, évalue leur priorité et oriente les demandes d’entraide.
+<strong>Des ressources partagées dans le respect du droit
+d’auteur</strong> Les étudiants peuvent partager leurs propres fiches de
+révision et référencer des ressources accessibles publiquement, en
+indiquant leur source. Les documents protégés ne sont pas reproduits ni
+redistribués sans autorisation.</p>
+<h3 id="ce-qui-différencie-studentconnect">Ce qui différencie
+StudentConnect</h3>
+<p>Les plateformes universitaires permettent de consulter des
+informations, d’accéder à des ressources ou de suivre ses cours.
+StudentConnect souhaite aller plus loin en combinant l’entraide entre
+étudiants, le partage de ressources et le suivi des difficultés
+universitaires.</p>
+<p>L’objectif n’est donc pas seulement de faciliter l’accès aux
+informations, mais de <em>permettre aux étudiants de s’entraider, de
+maintenir la continuité de leurs études et de trouver des solutions
+ensemble, même entre différentes universités</em>.</p>
+<h1 id="scénarios-dusage">Scénarios d’usage</h1>
+<ol type="1">
+<li><p>En tant qu’étudiant de Nanterre, je renseigne ma formation, mes
+matières et mes compétences. L’application me propose des étudiants
+d’autres universités qui suivent des matières ou des formations
+similaires, grâce à un matching multicritère.</p></li>
+<li><p>En tant qu’étudiant qui recherche un équivalent à une matière, je
+renseigne son intitulé et son contenu. L’application compare les
+programmes renseignés et identifie les matières similaires dans d’autres
+universités.</p></li>
+<li><p>En tant qu’étudiant qui ne peut pas travailler chez lui, je
+recherche une bibliothèque ou un espace de travail. L’application filtre
+les lieux selon ma localisation, les horaires et les équipements
+disponibles.</p></li>
+<li><p>En tant qu’étudiant qui souhaite aider les autres, je publie une
+fiche de révision que j’ai créée ou je référence un lien vers une
+ressource publique. Les autres étudiants peuvent retrouver cette
+ressource par matière et par catégorie.</p></li>
+<li><p>En tant qu’étudiant bloqué sur une matière, je publie une demande
+d’entraide. L’application permet de décrire ma difficulté et de
+l’associer à une matière et à des compétences recherchées.</p></li>
+<li><p>En tant qu’étudiant qui souhaite réviser avec d’autres personnes,
+je renseigne mon niveau, mes matières et mes objectifs. L’application
+peut constituer un groupe de travail selon ces critères.</p></li>
+<li><p>En tant qu’étudiant confronté à un blocage universitaire, je
+consulte un signalement déjà publié et je confirme que je rencontre le
+même problème. Le nombre de confirmations permet de mieux identifier les
+difficultés partagées.</p></li>
+<li><p>En tant qu’étudiant qui consulte les signalements, je souhaite
+retrouver les déclarations qui concernent un même problème.
+L’application analyse les textes et regroupe les signalements
+similaires.</p></li>
+</ol>
+<h1 id="plan-feature">Plan feature</h1>
+<p>Une feature a un effet sur <strong>la BD, le back, l’API REST et le
+front</strong>. Chaque feature est portée par <strong>une seule
+personne</strong> et repose sur <strong>un algorithme</strong>
+identifié.</p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr>
+<th>Version</th>
+<th>Yasmine</th>
+<th>Melissa</th>
+<th>Kenza</th>
+<th>Daniel</th>
+<th>Hélios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>v0.1.0</strong> 24/11</td>
+<td>F3 Recherche d’espaces de travail — filtrage multicritère</td>
+<td>F1 Matching interuniversitaire — matching multicritère</td>
+<td>F2 Équivalence des matières entre universités — calcul de
+similarité</td>
+<td>F4 Partage de ressources pédagogiques — gestion et catégorisation
+des ressources</td>
+<td>F5 Gestion des demandes d’entraide — gestion des demandes et des
+compétences associées</td>
+</tr>
+<tr>
+<td><strong>v0.2.0</strong> 08/12</td>
+<td>F8 Analyse des signalements universitaires — analyse textuelle et
+classification</td>
+<td>F6 Constitution de groupes de travail — répartition
+multicritère</td>
+<td>F7 Confirmation des blocages — comptabilisation des
+confirmations</td>
+<td>F9 Évaluation de la gravité des blocages — système de scoring</td>
+<td>F10 Suivi des signalements — gestion des statuts et historique</td>
+</tr>
+<tr>
+<td><strong>v1.0.0</strong> 19/01</td>
+<td>F13 Alertes automatiques par e-mail — déclenchement automatique des
+notifications</td>
+<td>F11 Recommandation personnalisée de ressources — système de
+recommandation par score</td>
+<td>F12 Planification intelligente des révisions — algorithme
+d’ordonnancement</td>
+<td>F14 Répartition des demandes d’entraide — affectation
+multicritère</td>
+<td>F15 Tableau de bord des difficultés étudiantes — analyse statistique
+et visualisation</td>
+</tr>
+</tbody>
+</table>
+<h1 id="architecture">Architecture</h1>
+<p>Le front transmet les demandes à l’API REST. Le back exécute les
+règles métier et les algorithmes (matching entre étudiants, recherche de
+matières similaires, constitution de groupes de travail, analyse des
+signalements), accède à la base de données, puis renvoie les résultats
+au front au format JSON. L’API REST est intégrée à l’application Spring
+Boot.</p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 41%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr>
+<th>Couche</th>
+<th>Choix</th>
+<th>Remarques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Front</td>
+<td>React, JavaScript, HTML/CSS</td>
+<td>création et gestion des profils étudiants, recherche de ressources
+et d’espaces de travail, consultation des groupes et des signalements ;
+client de l’API REST uniquement ; dossier <code>front/</code></td>
+</tr>
+<tr>
+<td>API REST</td>
+<td>Spring Web (Spring Boot), OpenAPI / Swagger UI</td>
+<td>échanges HTTP et JSON ; versionnée sous <code>/api/v1</code></td>
+</tr>
+<tr>
+<td>Back</td>
+<td>Java, Spring Boot, Spring Data JPA, Hibernate, Bean Validation</td>
+<td>règles métier et algorithmes ; <strong>algorithmes en Java pur,
+indépendants de Spring</strong></td>
+</tr>
+<tr>
+<td>BD</td>
+<td>MySQL (H2 pour les tests)</td>
+<td>étudiants, universités, formations, matières, ressources
+pédagogiques, espaces de travail, demandes d’entraide, groupes de
+travail et signalements ; schéma versionné par
+<strong>Flyway</strong></td>
+</tr>
+<tr>
+<td>Qualité</td>
+<td>JUnit 5, JaCoCo, SonarCloud</td>
+<td>intégration continue GitHub Actions</td>
+</tr>
+<tr>
+<td>Conteneurs</td>
+<td>Docker Compose</td>
+<td>BD dès v0.1.0, application en v0.2.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Qualité du code.</strong> Au-delà de l’architecture :</p>
+<ul>
+<li><strong>Clean Code</strong> : noms métier explicites, fonctions
+courtes, pas de duplication, commentaires qui expliquent le
+<em>pourquoi</em> ;</li>
+<li><strong>SOLID</strong>, objets valeur immuables et invariants
+vérifiés à la construction ;</li>
+<li><strong>design patterns</strong> quand ils servent, nommés dans les
+fiches de features ;</li>
+<li>conventions <strong>REST</strong> et règles de sécurité
+<strong>OWASP</strong> ;</li>
+<li><em>quality gate</em> SonarCloud au vert.</li>
+</ul>
+<h1 id="démarche-pour-chaque-feature">Démarche pour chaque feature</h1>
+<p>Les étapes s’enchaînent <strong>dans cet ordre, sans en
+sauter</strong> : on ne commence une étape que lorsque la précédente est
+terminée.</p>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 53%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Étape</th>
+<th>Ce qu’on fait</th>
+<th>Terminé quand</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Idéation</td>
+<td>Besoin et scénario ; <strong>algorithme retenu</strong>, complexité,
+alternatives ; impact sur le schéma et l’API ; critères d’acceptation.
+Issue + fiche <code>doc/features/</code>.</td>
+<td>La fiche est validée par un autre membre.</td>
+</tr>
+<tr>
+<td>2. Back</td>
+<td>Migration Flyway ; <strong>domaine</strong> en Java pur (modèle,
+règles métier, algorithme de matching, similarité, classification ou
+scoring selon la feature) ; <strong>application</strong> (ports,
+services) ; adaptateur de persistance.</td>
+<td>Le code compile et ArchUnit passe.</td>
+</tr>
+<tr>
+<td>3. Tests</td>
+<td>Tests unitaires des algorithmes (cas limites, invariants,
+propriétés) ; tests des services avec de faux adaptateurs ; tests
+d’intégration de la persistance.</td>
+<td><code>./gradlew build</code> passe ; chaque critère d’acceptation
+est couvert.</td>
+</tr>
+<tr>
+<td>4. API REST</td>
+<td>Endpoints <code>/api/v1</code>, DTO validés, erreurs
+<code>problem+json</code>, documentation OpenAPI ; tests de l’API.</td>
+<td>Visible dans Swagger UI ; tests de l’API verts.</td>
+</tr>
+<tr>
+<td>5. Front</td>
+<td>Développement des interfaces React qui consomment
+<strong>uniquement</strong> l’API REST : profils étudiants, recherche,
+ressources, entraide et signalements selon la feature.</td>
+<td>Scénario jouable de bout en bout ; PR relue ; fiche complétée avec
+son araignée.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="protocole-dusage-de-lia">Protocole d’usage de l’IA</h1>
+<p>Principes fondamentaux à appliquer pendant tout le long de ce projet
+:</p>
+<ul>
+<li>Vérifier au maximum les résultats qui vont nous être donnés par les
+intelligences artificielles que nous serons amenés à utiliser.</li>
+<li>Chaque prompt devra être réfléchi et notre utilisation de l’IA devra
+être intelligemment pilotée afin de ne pas perdre le fil de notre
+travail et des algorithmes/codes que nous serons amenés à écrire.</li>
+<li>Interdiction d’inclure du code qu’on ne comprend pas et de confier à
+l’IA des données personnelles.</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 38%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr>
+<th>Activité</th>
+<th>Ce que fait l’IA</th>
+<th>Ce que fait l’humain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recherche du sujet et conception des objectifs du projet</td>
+<td>Aide l’humain dans son choix des fonctionnalités à inclure,
+notamment par rapport à la pertinence vis-à-vis des consignes et pour
+éviter de faire un projet type « interface d’une simple base de données
+».</td>
+<td>Trouver le sujet du projet et réfléchir aux fonctionnalités
+techniques et algorithmiques qui pourraient être incluses.</td>
+</tr>
+<tr>
+<td>Algorithmes</td>
+<td>Aide à comprendre les algorithmes de matching, de similarité, de
+classification et de scoring. Elle peut également vérifier le
+fonctionnement du code, l’annoter et proposer des améliorations.</td>
+<td>Rassemble les attentes de rendu des algorithmes puis les conçoit et
+les écrit en prenant en compte leur complexité.</td>
+</tr>
+<tr>
+<td>Code technique (API, configuration, front)</td>
+<td>Peut générer certaines parties, notamment les fonctions les plus
+complexes, et aider à comprendre les choix techniques.</td>
+<td>Relit chaque ligne générée et compile avant d’adapter le code en
+fonction des besoins pour répondre au sujet.</td>
+</tr>
+<tr>
+<td>Tests</td>
+<td>Suggère les cas de test les plus courants, notamment pour les
+algorithmes de matching, de constitution des groupes et d’analyse des
+signalements.</td>
+<td>Définit les propriétés, vérifie les tests effectués et adapte les
+propositions de l’IA en fonction de l’avancée du projet.</td>
+</tr>
+<tr>
+<td>Débogage et revue</td>
+<td>Propose des diagnostics et des pistes de résolution des bugs
+persistants.</td>
+<td>Analyse les erreurs et corrige en conséquence.</td>
+</tr>
+</tbody>
+</table>
+<p>Afin d’assurer une traçabilité de l’usage de l’IA dans notre projet,
+les codes entièrement générés seront annotés en conséquence avec la
+précision des technologies utilisées et le niveau d’utilisation
+(l’écriture complète étant le niveau le plus élevé et la simple demande
+de recommandations ou de perspectives d’amélioration étant plus
+faible).</p>
+<h1 id="annexe-part-ia">Annexe : part IA / part humaine</h1>
+<p><img src="part-ia.svg" class="araignee" /></p>
+<p>Valeurs dans <code>doc/part-ia.json</code>, régénérées à chaque
+compilation.
+<!-- Commenter honnêtement les dépassements de plafond. --></p>
+</body>
+</html>
